@@ -254,8 +254,8 @@ let arr2 = [22, 3, 12, 5, 67, 99, 11];
 
 // print all elements of array
 
-// arr2.forEach(function(element) {
-//   console.log(element);
-// });
+arr2.forEach(function(element) {
+  console.log(element);
+});
 
-// arr2.forEach((element) => console.log(element));
+arr2.forEach((element) => console.log(element));
