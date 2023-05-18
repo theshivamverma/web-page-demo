@@ -167,7 +167,7 @@ while(a < 10) {
 let i = 0;
 
 do {
-  console.log(i);
+  // console.log(i);
   i = i + 1;
 } while (i < 0);
 
@@ -201,7 +201,7 @@ function sayHello(name, x, y) { // parameter
 }
 
 // function expression
-let functionExpression = function(name) {
+let functionExpression = function(name) { // anonymous function
   console.log('Hi i am a function expression');
 }
 
@@ -254,8 +254,136 @@ let arr2 = [22, 3, 12, 5, 67, 99, 11];
 
 // print all elements of array
 
-arr2.forEach(function(element) {
-  console.log(element);
-});
+// for(let i = 0; i < arr2.length; i++){
+//   // console.log(arr2[i]);
+// }
 
-arr2.forEach((element) => console.log(element));
+// const result = arr2.forEach(function(element) {
+//   console.log(element);
+// });
+
+// console.log(result)
+
+// arr2.forEach((element) => console.log(element));
+
+// map
+
+const arr3 = [];
+
+for(let i = 0; i < arr2.length; i++){
+  let result = arr2[i] * 2;
+  arr3[i] = result;
+}
+
+// console.log(arr2)
+// console.log(arr3);
+
+const arr4 = arr2.map(function(element, index){
+  if(index % 2 !== 0) {
+    return element * 3;
+  }
+  return element;
+})
+
+const arr5 = arr2.map((element) => element * 3);
+
+// console.log(arr4);
+// console.log(arr2);
+
+// filter
+
+// +,-,*,/,
+// % -> MODULO
+
+// console.log(7 % 2)
+
+// let arr2 = [22, 3, 12, 5, 67, 99, 11];
+
+const arr6 = [];
+
+for (let i = 0; i < arr2.length; i++) {
+  const element = arr2[i];
+  if(element % 2 === 0){
+    arr6.push(element)
+  }
+}
+
+// console.log(arr6)
+
+const result = arr2.filter(function(element){
+  if(element % 2 === 0){
+    return element;
+  }
+})
+
+// ternary operator
+// condition ? true logic : false logic
+
+// let z1 = 6;
+
+// console.log(z1 === 5 ? 'Five' : 'Not five');
+
+const result1 = arr2.filter((element) => element % 2 === 0)
+
+// console.log(result)
+// console.log(result1)
+
+// reduce
+
+// let arr2 = [22, 3, 12, 5, 67, 99, 11];
+
+let total = 0;
+
+for (let i = 0; i < arr2.length; i++) {
+  total = total + arr2[i];
+}
+
+// console.log(total)
+
+const sum = arr2.reduce(function(acc, element){
+  return acc = acc + element
+}, 0)
+
+const sum1 = arr2.reduce((acc, element) => acc = acc + element, 0)
+
+// console.log(sum);
+// console.log(sum1);
+
+// mutability
+
+// IMP
+// immutability
+
+const movie = {
+  name: "Man of Steel",
+  rating: 7,
+  release: 2013,
+  lead: {
+    name: "Henry Cavill",
+    age: 36,
+  },
+  director: {
+    name: "Zack Snyder",
+    otherMovies: ["300", "Batman v Superman"],
+  },
+};
+
+
+const fruits = ["banana", "orange", "mango"];
+
+// spread and rest operator
+// ...
+
+// console.log(fruits)
+// console.log(...fruits) // spread
+
+function addFruit(arr, fruitName) {
+  const result = [...arr];
+  result.unshift(fruitName);
+  return result;
+}
+
+const newFruitsArr = addFruit(fruits, "apple");
+
+console.log(newFruitsArr);
+console.log(fruits);
