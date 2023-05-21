@@ -368,22 +368,63 @@ const movie = {
   },
 };
 
+function updateRating(movieObj, inc) {
+  const result = {...movieObj}
 
-const fruits = ["banana", "orange", "mango"];
+  inc === true ? result.rating += 1 : result.rating -= 1;
+  return result
+}
 
-// spread and rest operator
-// ...
-
-// console.log(fruits)
-// console.log(...fruits) // spread
-
-function addFruit(arr, fruitName) {
-  const result = [...arr];
-  result.unshift(fruitName);
+function addSequel(movieObj) {
+  const result = {...movieObj}
+  result.sequel = true;
   return result;
 }
 
-const newFruitsArr = addFruit(fruits, "apple");
+function updateAge(movieObj) {
+  const result = {...movieObj}
+  result.lead = {...movieObj.lead}
+  result.lead.age += 1;
+  return result;
+}
 
-console.log(newFruitsArr);
-console.log(fruits);
+const newObj = updateAge(movie);
+
+
+const fruitBasket = [
+  { id: 1, name: "mango", quantity: 5 },
+  { id: 2, name: "apple", quantity: 4 },
+  { id: 3, name: "banana", quantity: 12},
+  { id: 4, name: "strawberry", quantity: 4 },
+];
+
+
+function updateBasketQuantity(fruitArr, id, updateFlag) {
+  return fruitArr.map(fruitObj => {
+    if(fruitObj.id === id) {
+      const result = {...fruitObj}
+      if(updateFlag) {
+        result.quantity += 1
+      } else {
+        result.quantity -= 1
+      }
+      return result;
+    }
+    return fruitObj;
+  })
+}
+
+function updateBasketQuantity(fruitArr, id, updateFlag) {
+  return fruitArr.map(fruitObj => {
+    if(fruitObj.id === id) {
+      return {...fruitObj, quantity: updateFlag ? fruitObj.quantity + 1 : fruitObj.quantity - 1}
+    }
+    return fruitObj;
+  })
+}
+
+
+const updatedBasket = updateBasketQuantity(fruitBasket, 3, true)
+console.log(fruitBasket)
+console.log(updatedBasket);
+
