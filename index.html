@@ -10,14 +10,13 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <script src="./script.js"></script>
   </head>
   <body>
     <header>
       <div class="logo">
         <h1>Protonn</h1>
       </div>
-      <nav class="nav">
+      <nav class="nav" id="nav">
         <ul>
           <li class="link"><a class="" href="#">Product</a></li>
           <li class="link">
@@ -37,8 +36,9 @@
         </ul>
       </nav>
       <button class="nav-button">Get started</button>
-      <button class="menu">
-        <i class="ri-menu-line"></i>
+      <button class="menu" id="menuBtn">
+        <i id="btnMenuIcon" class="ri-menu-line"></i>
+        <i id="btnCloseIcon" class="ri-close-circle-line"></i>
       </button>
     </header>
     <main>
@@ -128,5 +128,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
