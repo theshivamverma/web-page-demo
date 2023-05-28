@@ -428,8 +428,6 @@
 // console.log(fruitBasket)
 // console.log(updatedBasket);
 
-prompt("Hello")
-
 const menuBtn = document.querySelector('#menuBtn');
 const nav = document.querySelector("#nav");
 const btnMenuIcon = document.querySelector("#btnMenuIcon");
