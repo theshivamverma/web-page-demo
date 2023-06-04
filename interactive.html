@@ -5,9 +5,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DOM Manipulation</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1>JS calculator</h1>
+   <header>
+      <a href="./">
+        <div class="logo">
+          <h1>Protonn</h1>
+        </div>
+      </a>
+      <nav class="nav" id="nav">
+        <ul>
+          <li class="link"><a class="" href="./interactive.html">About</a></li>
+          <li class="link">
+            <a href="#">Use cases</a>
+            <i class="down-arrow ri-arrow-down-s-line"></i>
+
+            <ul class="sub-links">
+              <li class="sub-link-item"><a href="#">Link 1</a></li>
+              <li class="sub-link-item"><a href="#">Link 1</a></li>
+              <li class="sub-link-item"><a href="#">Link 1</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li class="link"><a href="#">Pricing</a></li>
+          <li class="link"><a href="#">Resources</a></li>
+        </ul>
+      </nav>
+      <button class="nav-button">Get started</button>
+      <button class="menu" id="menuBtn">
+        <i id="btnMenuIcon" class="ri-menu-line"></i>
+        <i id="btnCloseIcon" class="ri-close-circle-line"></i>
+      </button>
+    </header>
+  <!-- <h1>JS calculator</h1>
   <input type="text" id="num1" />
   <input type="text" id="num2" />
   <button id="add">+</button>
@@ -18,7 +50,7 @@
 
 
   
-  <p id="result"></p>
+  <p id="result"></p> -->
   <script src="./interactive.js"></script>
 </body>
 </html>

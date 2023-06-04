@@ -11,16 +11,16 @@ const fakeAPICall = function (username, password) {
   });
 }
 
-// const apiResult = fakeAPICall('test123', '12345')
+const apiResult = fakeAPICall('test123', '12345')
 
 // .then and .catch version of promises
-// apiResult
-// .then(function(res){
-//   return res
-// })
-// .catch(function(err) {
-//   console.log(err)
-// })
+apiResult
+.then(function(res){
+  return res
+})
+.catch(function(err) {
+  console.log(err)
+})
 
 // async...await version of promises
 async function login(username, password) {
@@ -67,7 +67,7 @@ const apiCall = async () => {
   }
 }
 
-apiCall()
+// apiCall()
 
 // login('test12', '12345')
 
